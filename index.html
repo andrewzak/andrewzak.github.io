@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le app di Zak – app semplici e gratuite</title>
+<meta name="description" content="App semplici e gratuite per Android che liberano tempo: ricevute, anagrafiche e altro, by Zak.">
+<!--
+  NOTE PER ZAK
+  - Questo file va nel repository andrewzak.github.io (pagina principale).
+  - Ogni app ha il suo repository: il link "/ricevutediaffitto/" porta a quel sito.
+  - Le immagini delle app sono prese direttamente dai loro repository
+    (es. /ricevutediaffitto/logo_app_home.png), quindi non serve copiarle qui.
+  - Per aggiungere un'app: copia un blocco <article class="app">...</article> e cambia testi e link.
+  - Nessuna risorsa esterna: niente cookie, niente script.
+-->
+<style>
+  :root {
+    --bg: #D6DECC;
+    --bg-dark: #C3CDB4;
+    --card: #F7F7F7;
+    --blue: #1F3A7A;
+    --orange: #CC7000;
+    --light-orange: #F6D9B3;
+    --text: #1d2433;
+    --muted: #4a5568;
+    --radius: 16px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: var(--blue); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 56px 0 24px; text-align: center; }
+  h1 { color: var(--blue); font-size: clamp(30px, 6vw, 46px); margin: 0 0 8px; line-height: 1.15; }
+  .tagline { font-size: 19px; color: var(--muted); max-width: 620px; margin: 0 auto; }
+
+  main { padding: 24px 0 48px; }
+  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+  .app {
+    background: var(--card);
+    border: 2px solid var(--bg-dark);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .app .top { display: flex; align-items: center; gap: 16px; }
+  .icon {
+    width: 72px; height: 72px; flex: none;
+    border-radius: 18px; border: 2px solid var(--blue);
+    background: var(--orange); overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 800; font-size: 26px;
+  }
+  .icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .icon.placeholder { background: var(--light-orange); color: var(--blue); }
+  .app h2 { margin: 0; color: var(--blue); font-size: 22px; line-height: 1.2; }
+  .badge {
+    display: inline-block; margin-top: 4px;
+    font-size: 12px; font-weight: 700; letter-spacing: .3px;
+    padding: 2px 10px; border-radius: 999px;
+    background: var(--bg-dark); color: var(--blue);
+  }
+  .badge.soon { background: var(--light-orange); }
+  .app p { margin: 0; color: var(--muted); }
+  .app .actions { margin-top: auto; padding-top: 8px; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%;
+    padding: 12px 20px; border-radius: var(--radius);
+    background: var(--orange); color: #fff;
+    border: 2px solid var(--blue); font-weight: 700; font-size: 16px;
+    text-decoration: none;
+  }
+  .btn.secondary { background: var(--light-orange); color: var(--blue); }
+  .btn[aria-disabled="true"] { opacity: .6; cursor: not-allowed; }
+
+  footer { background: var(--bg-dark); border-top: 2px solid var(--blue); padding: 28px 0; font-size: 15px; }
+  .nocookie { font-weight: 700; color: var(--blue); margin: 0 0 8px; }
+  .small { font-size: 13px; color: var(--muted); margin: 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Le app di Zak</h1>
+    <p class="tagline">
+      App semplici e gratuite per Android, pensate per togliere di mezzo la carta
+      e liberare tempo. Nessun account, i dati restano sul telefono.
+    </p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="apps">
+
+      <!-- APP 1: Ricevute di Affitto -->
+      <article class="app">
+        <div class="top">
+          <div class="icon">
+            <img src="/ricevutediaffitto/logo_app_home.png" alt="Logo Ricevute di Affitto">
+          </div>
+          <div>
+            <h2>Ricevute di Affitto</h2>
+            <span class="badge">Android · gratuita</span>
+          </div>
+        </div>
+        <p>
+          Compila, calcola e stampa le ricevute del canone di locazione:
+          tre per foglio A4, fino a 12 ricevute per chiudere l'anno in un minuto.
+        </p>
+        <div class="actions">
+          <a class="btn" href="/ricevutediaffitto/">Scopri l'app</a>
+        </div>
+      </article>
+
+      <!-- APP 2: Anagrafica Soci (in arrivo) -->
+      <article class="app">
+        <div class="top">
+          <div class="icon placeholder">AS</div>
+          <div>
+            <h2>Anagrafica Soci</h2>
+            <span class="badge soon">In arrivo</span>
+          </div>
+        </div>
+        <p>
+          L'anagrafica dei soci per associazioni e circoli, semplice e senza abbonamenti.
+          Presto maggiori dettagli.
+        </p>
+        <div class="actions">
+          <!-- Quando il sito dell'app è pronto: href="/anagraficasoci/" e togli aria-disabled -->
+          <a class="btn secondary" href="#" aria-disabled="true">Presto disponibile</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="nocookie">Questo sito non usa cookie né strumenti di tracciamento.</p>
+    <p class="small">
+      Sito ospitato su GitHub Pages. Ogni app ha la propria pagina con informativa sulla privacy.
+      Contatti: <a href="mailto:zakpoint@yahoo.it">zakpoint@yahoo.it</a>
+    </p>
+    <p class="small">© 2026 – by Zak</p>
+  </div>
+</footer>
+
+</body>
+</html>
